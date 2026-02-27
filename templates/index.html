@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Insurance Charges Prediction</h2>
+
+<form action="/predict" method="post">
+
+Age:<br>
+<input type="number" name="age" required><br><br>
+
+BMI:<br>
+<input type="number" step="0.1" name="bmi" required><br><br>
+
+Children:<br>
+<input type="number" name="children" required><br><br>
+
+Sex:<br>
+<select name="sex">
+  <option value="male">Male</option>
+  <option value="female">Female</option>
+</select><br><br>
+
+Smoker:<br>
+<select name="smoker">
+  <option value="yes">Yes</option>
+  <option value="no">No</option>
+</select><br><br>
+
+Region:<br>
+<select name="region">
+  <option value="northwest">Northwest</option>
+  <option value="southeast">Southeast</option>
+  <option value="southwest">Southwest</option>
+  <option value="northeast">Northeast</option>
+</select><br><br>
+
+<input type="submit" value="Predict">
+
+</form>
+
+<h3>{{ prediction_text }}</h3>
+
+</body>
+</html>
